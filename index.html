@@ -206,16 +206,21 @@
 </header>
 
 <!-- FLOW -->
-<div class="flow">
+<div class="flow" style="grid-template-columns:repeat(5,1fr);">
   <div class="flow-item">
     <div class="flow-label">SALARY</div>
     <div class="flow-value" style="color:var(--text);">825만</div>
     <div class="flow-sub">세후 월급여</div>
   </div>
   <div class="flow-item">
-    <div class="flow-label">FIXED COST</div>
-    <div class="flow-value" style="color:var(--amber);">205만</div>
+    <div class="flow-label">고정지출</div>
+    <div class="flow-value" style="color:var(--amber);">95만</div>
     <div class="flow-sub">보험·구독·기부</div>
+  </div>
+  <div class="flow-item">
+    <div class="flow-label">자동저축</div>
+    <div class="flow-value" style="color:var(--green);">110만</div>
+    <div class="flow-sub">연금 100 + 신한펀드 10</div>
   </div>
   <div class="flow-item">
     <div class="flow-label">나에게</div>
@@ -260,7 +265,7 @@
 <div class="section-title">620만 배분 구조</div>
 <div class="two-col">
   <div class="card">
-    <div class="card-label">월간 배분</div>
+    <div class="card-label">월간 배분 (620만 기준)</div>
     <div class="alloc-bar">
       <div class="alloc-seg" style="width:27.4%;background:#c17d2a;"></div>
       <div class="alloc-seg" style="width:11.3%;background:#9e6b3a;"></div>
@@ -276,19 +281,32 @@
       <div class="alloc-row"><div class="alloc-dot" style="background:#3a6b9e;"></div><span class="alloc-name">장기투자 ETF</span><span class="alloc-amt">230만</span><span class="alloc-pct">37.1%</span><span class="alloc-tag" style="background:var(--blue-light);color:var(--blue);">미래에게</span></div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-label">고정비 내역</div>
-    <table class="expense-table" style="margin-top:8px;">
-      <tr><td>희목재 도반 <span class="tag tag-give">보시</span></td><td>150,000</td></tr>
-      <tr><td>어머니 <span class="tag tag-give">가족</span></td><td>300,000</td></tr>
-      <tr><td>컴패션 <span class="tag tag-give">기부</span></td><td>45,000</td></tr>
-      <tr><td>한화손해 <span class="tag tag-ins">보험</span></td><td>82,806</td></tr>
-      <tr><td>현대해상 <span class="tag tag-ins">보험</span></td><td>226,940</td></tr>
-      <tr><td>삼성화재 <span class="tag tag-ins">보험</span></td><td>100,396</td></tr>
-      <tr><td>신한펀드 <span class="tag tag-sav">투자</span></td><td>100,000</td></tr>
-      <tr><td>LG전자구독</td><td>42,900</td></tr>
-      <tr class="total-row"><td>합계</td><td>1,048,042</td></tr>
-    </table>
+
+  <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="card">
+      <div class="card-label">소비성 고정비 · 매월 차감</div>
+      <table class="expense-table" style="margin-top:8px;">
+        <tr><td>희목재 도반 <span class="tag tag-give">보시</span></td><td>150,000</td></tr>
+        <tr><td>어머니 <span class="tag tag-give">가족</span></td><td>300,000</td></tr>
+        <tr><td>컴패션 <span class="tag tag-give">기부</span></td><td>45,000</td></tr>
+        <tr><td>한화손해 <span class="tag tag-ins">보험</span></td><td>82,806</td></tr>
+        <tr><td>현대해상 <span class="tag tag-ins">보험</span></td><td>226,940</td></tr>
+        <tr><td>삼성화재 <span class="tag tag-ins">보험</span></td><td>100,396</td></tr>
+        <tr><td>LG전자구독</td><td>42,900</td></tr>
+        <tr class="total-row"><td>소계</td><td>948,042</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-label">자동저축 · 미래에게 포함</div>
+      <table class="expense-table" style="margin-top:8px;">
+        <tr><td>IBK연금 <span class="tag tag-sav">연금</span></td><td>1,000,000</td></tr>
+        <tr><td>신한펀드 <span class="tag tag-sav">투자</span></td><td>100,000</td></tr>
+        <tr class="total-row"><td>소계</td><td>1,100,000</td></tr>
+      </table>
+      <div style="margin-top:8px;font-size:10px;color:var(--muted);line-height:1.7;padding:7px 10px;background:var(--bg2);border-radius:7px;">
+        급여일 자동이체 → 미래에게 380만 구성 항목
+      </div>
+    </div>
   </div>
 </div>
 
